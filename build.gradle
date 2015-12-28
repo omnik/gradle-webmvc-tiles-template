@@ -1,0 +1,27 @@
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "war"
+
+project.buildDir = ".out"
+
+repositories{
+    jcenter()
+}
+
+dependencies{
+    // LOG4J2
+    compile 'org.apache.logging.log4j:log4j-core:2.1'
+    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.1'
+
+    // SPRING CONTEXT
+    compile 'org.springframework:spring-context:4.1.6.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'javax.servlet:jstl:1.2'
+
+    compile 'org.apache.tiles:tiles-jsp:3.0.5'
+    compile 'org.apache.tiles:tiles-extras:3.0.5'
+
+    compile 'org.apache.commons:commons-lang3:3.4'
+
+}
